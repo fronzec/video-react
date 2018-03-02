@@ -4,15 +4,28 @@ import PropTypes from 'prop-types'
 
 class Media extends React.Component {
 
+    ///Forma de ECMAScript7
+    state = {
+        author: 'Eduardo Flores'
+    }
+    ///Forma de ECMAScript6
     // constructor(props){
     //     super(props)
-    //     this.handleClick = this.handleClick.bind(this)///Cambio del contexto al metodo handleClick
+    //     this.state = {
+    //         author: props.author
+    //     }
+    //     // this.handleClick = this.handleClick.bind(this)///Cambio del contexto al metodo handleClick
     // }
 
     ///Los arrow function heredan el contexto de su padre automaticamente en vez de hacer el bind a cada metodo
     handleClick= (event) =>{
         console.log(this.props.tittle)
+        this.setState({
+            author:'Ricardo Celis'
+        })
     }
+
+
     render() {
         ///Extrayendo los valores a propiedades
         const {title, author, image} = this.props;
@@ -32,7 +45,7 @@ class Media extends React.Component {
                 <div className={'Media-cover'}>
                     <img className={'Media-image'} src={this.props.image} width={260} height={160}/>
                     <h3 className={'Media-title'}>{this.props.title}</h3>
-                    <p className={'Media-author'}>{this.props.author}</p>
+                    <p className={'Media-author'}>{this.state.author}</p>
                 </div>
             </div>
         )
