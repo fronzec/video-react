@@ -1,1 +1,1 @@
-PlatziVideo
+Video-React
