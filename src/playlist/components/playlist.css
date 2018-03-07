@@ -1,0 +1,24 @@
+.Playlist {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    padding-bottom: 80px;
+}
+
+.Playlist-title {
+    font-size: 25px;
+    margin: 5px 0 0 0;
+    color: #44546b;
+    white-space: normal;
+    font-weight: bold ;
+}
+
+.Playlist-description {
+    font-size: 12px;
+    margin: 1px 0 0 0;
+}
+
+.Playlist-scroll {
+
+}
